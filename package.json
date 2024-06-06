@@ -21,6 +21,11 @@
     "vite": "^5.0.0"
   },
   "dependencies": {
-    "@tanstack/svelte-table": "^8.17.3"
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@tanstack/react-table": "^8.17.3",
+    "@tanstack/svelte-table": "^8.17.3",
+    "framer-motion": "^11.2.10"
   }
 }
