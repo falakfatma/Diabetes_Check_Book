@@ -36,7 +36,7 @@ const columns = [
   },
 ];
 
-function TanStackTableHeader() {
+function TanStackTable() {
   const [data, setData] = useState(DATA);
   const table = useReactTable({
     data,
@@ -61,7 +61,10 @@ function TanStackTableHeader() {
         </Box>
         )
       })}
+      {table.getRowModel().rows.map((row) =>
+        {row}
+      )}
     </>
   );
 }
-export default TanStackTableHeader;
+export default TanStackTable;
