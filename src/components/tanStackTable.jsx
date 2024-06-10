@@ -63,7 +63,7 @@ function TanStackTable() {
   return (
     <TableContainer>
       <Table variant="striped" colorScheme="teal">
-        <TableCaption>Imperial to metric conversion factors</TableCaption>
+        <TableCaption>Data</TableCaption>
         {table.getHeaderGroups().map((headerGroup) => {
           return (
             <Thead key={headerGroup.id}>
