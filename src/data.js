@@ -14,5 +14,21 @@ export const DATA = [
     visits: 200,
     progress: 100,
     status: "Single"
+  },
+  {
+    firstName: "Kevin",
+    lastName: "Vandy",
+    age: 27,
+    visits: 200,
+    progress: 100,
+    status: "Single"
+  },
+  {
+    firstName: "Kevin",
+    lastName: "Vandy",
+    age: 27,
+    visits: 200,
+    progress: 100,
+    status: "Single"
   }
 ]
