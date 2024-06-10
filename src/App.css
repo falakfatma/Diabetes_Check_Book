@@ -1,6 +1,8 @@
-.table{
+/* .table{
   background-color: #f2f2f2;
-  padding: 10px;
+  width: 80%;
+  margin: auto;
+  padding: 0;
 }
 
 .th{
@@ -8,13 +10,19 @@
   flex-direction: row;
   border-bottom: 1px solid #ddd;
   /* text-align: left; */
-}
+/* }
 
 .headers{
   padding: 10px;
 }
 
 .tr{
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  font-size: x-large;
+  border: 2px solid #ddd;
 }
+
+.rows{
+  padding: 10px;
+  display:flex;
+} */ 
