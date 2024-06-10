@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import { getCoreRowModel, useReactTable } from "@tanstack/react-table";
 import { DATA } from "../data";
 
@@ -46,14 +46,15 @@ function tanstackTable() {
 
   return (
     <Box className="table">
-       Grand Parent Box
       {table.getHeaderGroups().map((headerGroup) => {
         return( 
         <Box key={headerGroup.id} className="th">
           {headerGroup.headers.map((headers) => {
             return (
               <Box className="headers" key={headers.id}>
-                {headers.column.columnDef.header}
+               <Heading fontSize='xl'>
+                 {headers.column.columnDef.header}
+               </Heading> 
                </Box>
              );
           })}
