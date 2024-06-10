@@ -52,7 +52,7 @@ function tanstackTable() {
         <Box key={headerGroup.id} className="th">
           {headerGroup.headers.map((headers) => {
             return (
-              <Box className="tr" key={headers.id}>
+              <Box className="headers" key={headers.id}>
                 {headers.column.columnDef.header}
                </Box>
              );

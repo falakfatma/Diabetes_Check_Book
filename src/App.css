@@ -1,2 +1,20 @@
-main {
+.table{
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.th{
+  display:flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ddd;
+  /* text-align: left; */
+}
+
+.headers{
+  padding: 10px;
+}
+
+.tr{
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
