@@ -36,16 +36,16 @@ const columns = [
   },
 ];
 
-function tanstackTable() {
+function TanStackTableHeader() {
   const [data, setData] = useState(DATA);
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
-
+  console.log(table.getRowModel()) ;
   return (
-    <Box className="table">
+    <>
       {table.getHeaderGroups().map((headerGroup) => {
         return( 
         <Box key={headerGroup.id} className="th">
@@ -61,7 +61,7 @@ function tanstackTable() {
         </Box>
         )
       })}
-    </Box>
+    </>
   );
 }
-export default tanstackTable;
+export default TanStackTableHeader;

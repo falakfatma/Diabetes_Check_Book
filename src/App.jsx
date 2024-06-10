@@ -1,12 +1,14 @@
-import { Heading } from "@chakra-ui/react";
+import { Heading, Box, Text } from "@chakra-ui/react";
 import "./App.css";
-import TanStackTable from "./components/tanstackTable"
+import TanStackTableHeader from "./components/tanStackTableHeader"
 
 export default function App() {
   return (
     <main>
       <Heading> TanStackTable </Heading>
-      <TanStackTable />
+      <Box className="table">
+        <TanStackTableHeader />
+      </Box>
     </main>
   );
 }
