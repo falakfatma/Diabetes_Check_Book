@@ -80,10 +80,9 @@ function TanStackTable() {
           );
         })}
 
-        {table.getRowModel().rows.map((row) => {
-          console.log(row.getVisibleCells());
-          return (
-            <Tbody key={row.id}>
+        <Tbody>
+          {table.getRowModel().rows.map((row) => {
+            return (
               <Tr>
                 {row.getVisibleCells().map((cell) => {
                   return (
@@ -96,9 +95,9 @@ function TanStackTable() {
                   );
                 })}
               </Tr>
-            </Tbody>
-          );
-        })}
+            );
+          })}
+        </Tbody>
       </Table>
     </TableContainer>
   );
