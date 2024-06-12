@@ -14,10 +14,12 @@ import {
   TableContainer,
 } from "@chakra-ui/react";
 import {
-  getCoreRowModel,
   useReactTable,
+  getCoreRowModel,
   flexRender,
-} from "@tanstack/react-table";
+} from '@tanstack/react-table'
+
+
 import { DATA } from "../data";
 
 const columns = [
@@ -59,6 +61,8 @@ function TanStackTable() {
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    columnResizeMode:"onChange",
+
   });
   return (
     <TableContainer>
@@ -68,10 +72,21 @@ function TanStackTable() {
           return (
             <Thead key={headerGroup.id}>
               <Tr>
-                {headerGroup.headers.map((headers) => {
+                {headerGroup.headers.map((header) => {
                   return (
-                    <Th fontSize="xl" key={headers.id}>
-                      {headers.column.columnDef.header}
+                    <Th 
+                      className="th"
+                      fontSize="xl" 
+                      key={header.id}
+                      w={header.getSize()}>
+                      {header.column.columnDef.header}
+                      <Box 
+                        onMouseDown={header.getResizeHandler()}
+                        onTouchStart={header.getResizeHandler()} 
+                        className={`resizer ${
+                          header.column.getIsResizing() ? "isResizing" : ""
+                        }`}
+                        />
                     </Th>
                   );
                 })}
@@ -79,11 +94,10 @@ function TanStackTable() {
             </Thead>
           );
         })}
-
         <Tbody>
           {table.getRowModel().rows.map((row) => {
             return (
-              <Tr>
+              <Tr key={row.id}>
                 {row.getVisibleCells().map((cell) => {
                   return (
                     <Td key={cell.id}>

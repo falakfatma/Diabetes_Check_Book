@@ -26,3 +26,28 @@
   padding: 10px;
   display:flex;
 } */ 
+.th{
+  position:relative;
+}
+.resizer{
+  position: absolute;
+  top: 0;
+  right:0;
+  opacity:0;
+  height: 100%;
+  width: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+}
+.resizer.isResizing {
+  background: blue;
+  opacity: 1;
+}
+ 
+@media (hover: hover) {
+  *:hover > .resizer {
+    opacity: 1;
+  }
+}
