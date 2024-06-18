@@ -62,7 +62,6 @@ function TanStackTable() {
     columns,
     getCoreRowModel: getCoreRowModel(),
     columnResizeMode:"onChange",
-
   });
   return (
     <TableContainer>
