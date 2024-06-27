@@ -7,6 +7,7 @@ import {
   Thead,
   Tbody,
   Tfoot,
+  Input,
   Tr,
   Th,
   Td,
@@ -21,12 +22,12 @@ import {
 
 
 import { DATA } from "../data";
-
+import EditableCell from "./editableCell"
 const columns = [
   {
     accessorKey: "firstName",
     header: "First Name",
-    cell: (props) => <p>{props.getValue()}</p>,
+    cell: EditableCell
   },
   {
     accessorKey: "lastName",
@@ -57,15 +58,36 @@ const columns = [
 
 function TanStackTable() {
   const [data, setData] = useState(DATA);
+
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
     columnResizeMode:"onChange",
+    defaultColumn: {
+      "size" : "60",
+      "minSize" : "20",
+      "maxSize" : "209",
+    },
+    meta:{
+      updateData : (rowId,columnId,Value)=>{
+        setData(
+          old => old.map((row,index)=>{
+            if(index === rowId){
+              return {...row,[columnId]:Value}
+            }else{
+              return row
+            }
+          })
+        )
+      }
+    }
   });
+  console.log(data)
+
   return (
     <TableContainer>
-      <Table variant="striped" colorScheme="teal">
+      <Table variant="striped" colorScheme="sky">
         <TableCaption>Data</TableCaption>
         {table.getHeaderGroups().map((headerGroup) => {
           return (
