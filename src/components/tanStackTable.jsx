@@ -23,36 +23,37 @@ import {
 
 import { DATA } from "../data";
 import EditableCell from "./editableCell"
+import StatusDropdown from "./status";
 const columns = [
   {
     accessorKey: "firstName",
     header: "First Name",
-    cell: EditableCell
+    cell: EditableCell,
   },
   {
     accessorKey: "lastName",
     header: "Last Name",
-    cell: (props) => <p>{props.getValue()}</p>,
+    cell: EditableCell,
   },
   {
     accessorKey: "age",
     header: "Age",
-    cell: (props) => <p>{props.getValue()}</p>,
+    cell: EditableCell,
   },
   {
     accessorKey: "visits",
     header: "Visits",
-    cell: (props) => <p>{props.getValue()}</p>,
+    cell: EditableCell,
   },
   {
     accessorKey: "progress",
     header: "Progress",
-    cell: (props) => <p>{props.getValue()}</p>,
+    cell: EditableCell,
   },
   {
     accessorKey: "status",
     header: "Status",
-    cell: (props) => <p>{props.getValue()}</p>,
+    cell: StatusDropdown,
   },
 ];
 
