@@ -1,3 +1,18 @@
+const MARRIED ={
+  value: "MARRIED",
+  color: "green.400",
+  options: ["MARRIED","SINGLE"],
+}
+
+const SINGLE =  {
+  value: "SINGLE",
+  color: "green.400",
+  options: ["MARRIED","SINGLE"],
+}
+
+export const STATUSES = [
+  MARRIED,SINGLE
+]
 export const DATA = [
   {
     firstName: "Tanner",
@@ -5,11 +20,7 @@ export const DATA = [
     age: 33,
     visits: 100,
     progress: 50,
-    status: {
-      value: "Married",
-      color: "green.400",
-      options: ["Married","Single"],
-    },
+    status: MARRIED,
   },
   {
     firstName: "Kevin",
@@ -17,11 +28,7 @@ export const DATA = [
     age: 27,
     visits: 200,
     progress: 100,
-    status: {
-      value: "Single",
-      color: "green.400",
-      options: ["Married","Single"],
-    },
+    status: SINGLE,
   },
   {
     firstName: "Kevin",
@@ -29,11 +36,7 @@ export const DATA = [
     age: 27,
     visits: 200,
     progress: 100,
-    status: {
-      value: "Married",
-      color: "green.400",
-      options: ["Married","Single"],
-    },
+    status: MARRIED,
   },
   {
     firstName: "Kevin",
@@ -41,10 +44,6 @@ export const DATA = [
     age: 27,
     visits: 200,
     progress: 100,
-    status: {
-      value: "Single",
-      color: "green.400",
-      options: ["Married","Single"],
-    },
+    status: SINGLE,
   },
 ];
