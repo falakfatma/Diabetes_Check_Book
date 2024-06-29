@@ -84,7 +84,7 @@ function TanStackTable() {
       }
     }
   });
-  console.log(data)
+  // console.log(data)
 
   return (
     <TableContainer>

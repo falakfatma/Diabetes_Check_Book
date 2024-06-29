@@ -7,10 +7,13 @@ import {
   MenuDivider,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import { STATUSES } from "../data";
 
 const StatusDropdown = ({ getValue, row, column, table }) => {
   const initialValue = getValue();
+
   // console.log("initialValue", initialValue)
+  // console.log("row", row)
   const [value, setValue] = useState(initialValue);
   // console.log("value",value)
   const { updateData } = table.options.meta;
@@ -22,7 +25,20 @@ const StatusDropdown = ({ getValue, row, column, table }) => {
       <Menu>
         <MenuButton isLazy>{value.value}</MenuButton>
         <MenuList>
-          {value.options.map((option, index) => {
+          {
+            STATUSES.map((option,index)=>{
+              return(
+                <MenuItem
+                key={index}
+                value={option.value}
+                onClick={() => updateData(row.index, column.id, option)}
+              >
+                {option?.value}
+              </MenuItem>
+              )
+            })
+          }
+          {/* {value.options.map((option, index) => {
             return (
               <MenuItem
                 key={index}
@@ -32,7 +48,7 @@ const StatusDropdown = ({ getValue, row, column, table }) => {
                 {option}
               </MenuItem>
             );
-          })}
+          })} */}
         </MenuList>
       </Menu>
     </>
