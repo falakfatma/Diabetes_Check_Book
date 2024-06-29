@@ -55,6 +55,11 @@ const columns = [
     header: "Status",
     cell: StatusDropdown,
   },
+  {
+    accessorKey: "updatedDate",
+    header: "Updated Date",
+    cell: (props) => <p>{props.getValue()}</p>,
+  },
 ];
 
 function TanStackTable() {
