@@ -1,12 +1,12 @@
 const MARRIED ={
   value: "MARRIED",
-  color: "green.400",
+  color: "green.200",
   options: ["MARRIED","SINGLE"],
 }
 
 const SINGLE =  {
   value: "SINGLE",
-  color: "green.400",
+  color: "pink.200",
   options: ["MARRIED","SINGLE"],
 }
 

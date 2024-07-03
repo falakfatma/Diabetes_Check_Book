@@ -93,7 +93,7 @@ function TanStackTable() {
 
   return (
     <TableContainer>
-      <Table variant="striped" colorScheme="sky">
+      <Table variant="striped" color="black">
         <TableCaption>Data</TableCaption>
         {table.getHeaderGroups().map((headerGroup) => {
           return (

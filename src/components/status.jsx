@@ -11,11 +11,7 @@ import { STATUSES } from "../data";
 
 const StatusDropdown = ({ getValue, row, column, table }) => {
   const initialValue = getValue();
-
-  // console.log("initialValue", initialValue)
-  // console.log("row", row)
   const [value, setValue] = useState(initialValue);
-  // console.log("value",value)
   const { updateData } = table.options.meta;
   useEffect(()=>{
     setValue(initialValue)
@@ -23,32 +19,22 @@ const StatusDropdown = ({ getValue, row, column, table }) => {
   return (
     <>
       <Menu>
-        <MenuButton isLazy>{value.value}</MenuButton>
+        <MenuButton isLazy background={value.color}>{value.value}</MenuButton>
         <MenuList>
           {
             STATUSES.map((option,index)=>{
               return(
                 <MenuItem
                 key={index}
-                value={option.value}
                 onClick={() => updateData(row.index, column.id, option)}
+                value={option.value}
+                margin={0}
               >
                 {option?.value}
               </MenuItem>
               )
             })
           }
-          {/* {value.options.map((option, index) => {
-            return (
-              <MenuItem
-                key={index}
-                value={option}
-                onClick={() => updateData(row.index, column.id, option)}
-              >
-                {option}
-              </MenuItem>
-            );
-          })} */}
         </MenuList>
       </Menu>
     </>
