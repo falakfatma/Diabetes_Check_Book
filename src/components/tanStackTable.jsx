@@ -72,7 +72,6 @@ function TanStackTable() {
     columnResizeMode:"onChange",
     defaultColumn: {
       "size" : "60",
-      "minSize" : "20",
       "maxSize" : "209",
     },
     meta:{
