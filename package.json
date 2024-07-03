@@ -26,6 +26,7 @@
     "@emotion/styled": "^11.11.5",
     "@tanstack/react-table": "^8.17.3",
     "@tanstack/svelte-table": "^8.17.3",
-    "framer-motion": "^11.2.10"
+    "framer-motion": "^11.2.10",
+    "react-datepicker": "^7.2.0"
   }
 }

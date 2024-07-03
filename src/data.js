@@ -21,7 +21,7 @@ export const DATA = [
     visits: 100,
     progress: 50,
     status: MARRIED,
-    updatedDate:"20 may 2024"
+    updatedDate:new Date("2020/05/20"),
   },
   {
     firstName: "Kevin",
@@ -30,7 +30,7 @@ export const DATA = [
     visits: 200,
     progress: 100,
     status: SINGLE,
-    updatedDate:"20 may 2024"
+    updatedDate:new Date("2020/05/20"),
   },
   {
     firstName: "Kevin",
@@ -39,7 +39,7 @@ export const DATA = [
     visits: 200,
     progress: 100,
     status: MARRIED,
-    updatedDate:"20 may 2024"
+    updatedDate:new Date("2020/05/20"),
   },
   {
     firstName: "Kevin",
@@ -48,6 +48,6 @@ export const DATA = [
     visits: 200,
     progress: 100,
     status: SINGLE,
-    updatedDate:"20 may 2024"
+    updatedDate:new Date("2020/05/20"),
   },
 ];

@@ -24,6 +24,7 @@ import {
 import { DATA } from "../data";
 import EditableCell from "./editableCell"
 import StatusDropdown from "./status";
+import CalendarData from "./calender";
 const columns = [
   {
     accessorKey: "firstName",
@@ -58,7 +59,7 @@ const columns = [
   {
     accessorKey: "updatedDate",
     header: "Updated Date",
-    cell: (props) => <p>{props.getValue()}</p>,
+    cell: CalendarData
   },
 ];
 
@@ -88,7 +89,7 @@ function TanStackTable() {
       }
     }
   });
-  // console.log(data)
+  console.log(data)
 
   return (
     <TableContainer>
