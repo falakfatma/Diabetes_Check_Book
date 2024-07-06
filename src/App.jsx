@@ -6,9 +6,6 @@ import Global_Search_Input from "./components/globalSearch";
 export default function App() {
   return (
     <main>
-      {/* <Heading> TanStackTable </Heading> */}
-        {/* <Calender /> */}
-        <Global_Search_Input />
         <TanStackTable />
     </main>
   );

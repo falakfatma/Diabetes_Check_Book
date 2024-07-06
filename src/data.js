@@ -33,8 +33,8 @@ export const DATA = [
     updatedDate:new Date("2024/06/25"),
   },
   {
-    firstName: "Kevin",
-    lastName: "Vandy",
+    firstName: "metha",
+    lastName: "payal",
     age: 27,
     visits: 200,
     progress: 100,

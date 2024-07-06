@@ -18,6 +18,7 @@ import {
   useReactTable,
   getCoreRowModel,
   flexRender,
+  getFilteredRowModel,
 } from '@tanstack/react-table'
 
 
@@ -25,6 +26,7 @@ import { DATA } from "../data";
 import EditableCell from "./editableCell"
 import StatusDropdown from "./status";
 import CalendarData from "./calender";
+import Global_Search_Input from "./globalSearch";
 const columns = [
   {
     accessorKey: "firstName",
@@ -65,16 +67,23 @@ const columns = [
 
 function TanStackTable() {
   const [data, setData] = useState(DATA);
+  const [columnFilters, setColumnFilters] = useState([
 
+  ])
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    state:{
+      columnFilters
+    },
+    getFilteredRowModel:getFilteredRowModel(),
     columnResizeMode:"onChange",
     defaultColumn: {
       "size" : "60",
       "maxSize" : "209",
     },
+    
     meta:{
       updateData : (rowId,columnId,Value)=>{
         setData(
@@ -93,6 +102,7 @@ function TanStackTable() {
 
   return (
     <TableContainer>
+      <Global_Search_Input columnFilters={columnFilters} setColumnFilters={setColumnFilters}/>
       <Table variant="striped" color="black">
         <TableCaption>Data</TableCaption>
         {table.getHeaderGroups().map((headerGroup) => {

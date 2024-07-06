@@ -19,7 +19,7 @@ const StatusDropdown = ({ getValue, row, column, table }) => {
   return (
     <>
       <Menu>
-        <MenuButton isLazy background={value.color}>{value.value}</MenuButton>
+        <MenuButton background={value.color}>{value.value}</MenuButton>
         <MenuList>
           {
             STATUSES.map((option,index)=>{
