@@ -1,8 +1,4 @@
 const Global_Search_Input = ({ columnFilters, setColumnFilters }) => {
-    const filter = {
-        firstName: "firstName",
-        lastName:"lastName"
-    }
     const firstNameFilter = columnFilters.find(f => f.id === "firstName")?.value || "";
     const lastNameFilter = columnFilters.find(f => f.id === "lastName")?.value || "";
     const onFilterChange = (id, value) => {
